@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>TribalHerb | Medicinal Plants</title><link rel="stylesheet" href="style.css">
+</head><body>
+<header class="navbar"><div class="logo">🌿 Tribal<span>Herb</span></div>
+<nav><a href="#home">Home</a><a href="#plants">Plants</a><a href="#regions">Tribal Areas</a><a href="#knowledge">Traditional Knowledge</a><a href="#farmers">Farmers</a><a href="#products">Products</a><a href="#api">API Data</a><a href="#about">About</a></nav>
+<div class="nav-right"><select id="language"><option>English</option><option>Telugu</option><option>Hindi</option></select><button onclick="goLogin()">Login</button></div></header>
+
+<section id="home" class="hero"><div class="overlay"></div><div class="hero-content">
+<span>🌿 NATURE • TRADITION • TECHNOLOGY</span><h1>Discover Medicinal Plants from <b>Araku, Chintapalli & Paderu</b></h1>
+<p>Explore medicinal plants, traditional knowledge, tribal communities and natural herbal products from the Agency areas of Andhra Pradesh.</p>
+<div class="search"><input id="heroSearch" placeholder="Search plant, root, herb or scientific name..."><button id="searchBtn">🔍 Search</button></div><div id="toast"></div>
+</div></section>
+
+<section class="stats"><div><h2>100+</h2><p>Medicinal Plants</p></div><div><h2>3</h2><p>Tribal Regions</p></div><div><h2>500+</h2><p>Traditional Uses</p></div><div><h2>24/7</h2><p>Plant Explorer</p></div></section>
+
+<section id="plants" class="section"><div class="heading"><span>EXPLORE PLANTS</span><h2>Popular Medicinal Plants</h2><p>Explore plants and their scientific names, parts and traditional information.</p></div>
+<div class="grid">
+<div class="card"><img src="https://loremflickr.com/700/500/ashwagandha"><div><h3>Ashwagandha</h3><i>Withania somnifera</i><p>🌱 Root • 📍 Araku</p><button onclick="openPlant('Ashwagandha')">View Details</button></div></div>
+<div class="card"><img src="https://loremflickr.com/700/500/tulsi,basil"><div><h3>Tulsi</h3><i>Ocimum tenuiflorum</i><p>🍃 Leaf • 📍 Chintapalli</p><button onclick="openPlant('Tulsi')">View Details</button></div></div>
+<div class="card"><img src="https://loremflickr.com/700/500/turmeric"><div><h3>Turmeric</h3><i>Curcuma longa</i><p>🌱 Rhizome • 📍 Paderu</p><button onclick="openPlant('Turmeric')">View Details</button></div></div>
+<div class="card"><img src="https://loremflickr.com/700/500/amla,fruit"><div><h3>Amla</h3><i>Phyllanthus emblica</i><p>🍈 Fruit • 📍 Araku</p><button onclick="openPlant('Amla')">View Details</button></div></div>
+</div></section>
+
+<section id="regions" class="section pale"><div class="heading"><span>OUR REGIONS</span><h2>Explore Tribal Areas</h2></div><div class="grid">
+<div class="card"><img src="https://loremflickr.com/900/650/araku,valley,india"><div><h3>🌿 Araku Valley</h3><p>Forests, coffee plantations, biodiversity and tribal culture.</p><button onclick="showRegion('Araku')">Explore →</button></div></div>
+<div class="card"><img src="https://loremflickr.com/900/650/forest,india"><div><h3>🌱 Chintapalli</h3><p>A forest-rich Agency area with diverse plants and traditional knowledge.</p><button onclick="showRegion('Chintapalli')">Explore →</button></div></div>
+<div class="card"><img src="https://loremflickr.com/900/650/mountains,village,india"><div><h3>🍃 Paderu</h3><p>A mountainous Agency region with rich biodiversity.</p><button onclick="showRegion('Paderu')">Explore →</button></div></div>
+</div></section>
+
+<section id="knowledge" class="section dark"><div class="heading"><span>TRADITIONAL KNOWLEDGE</span><h2>People, Forest & Herbal Traditions</h2></div><div class="grid">
+<div class="photo"><img src="https://loremflickr.com/900/650/tribal,india"><h3>👥 Tribal Communities</h3><p>Traditional communities have deep connections with forests and natural resources.</p></div>
+<div class="photo"><img src="https://loremflickr.com/900/650/herbal,medicine"><h3>🌿 Herbal Preparation</h3><p>Explore traditional preparation concepts such as powders and herbal products.</p></div>
+<div class="photo"><img src="https://loremflickr.com/900/650/forest,people"><h3>🌳 Forest Life</h3><p>Forest ecosystems support natural resources and local livelihoods.</p></div>
+</div></section>
+
+<section id="farmers" class="farmer"><div><span>FOR FARMERS</span><h2>Grow. Preserve. Connect.</h2><p>Register as a herbal farmer and showcase your medicinal plants.</p><button onclick="goRegister()">👨‍🌾 Register as Farmer</button></div></section>
+
+<section id="products" class="section"><div class="heading"><span>HERBAL PRODUCTS</span><h2>Natural Products</h2></div><div class="grid">
+<div class="card"><img src="https://loremflickr.com/700/500/herbal,powder"><h3>Ashwagandha Powder</h3><p>₹299</p><button onclick="addCart('Ashwagandha Powder',299)">Add to Cart</button></div>
+<div class="card"><img src="https://loremflickr.com/700/500/turmeric,powder"><h3>Organic Turmeric</h3><p>₹199</p><button onclick="addCart('Organic Turmeric',199)">Add to Cart</button></div>
+<div class="card"><img src="https://loremflickr.com/700/500/herbal,tea"><h3>Tulsi Herbal Tea</h3><p>₹249</p><button onclick="addCart('Tulsi Herbal Tea',249)">Add to Cart</button></div>
+<div class="card"><img src="https://loremflickr.com/700/500/amla,powder"><h3>Amla Powder</h3><p>₹229</p><button onclick="addCart('Amla Powder',229)">Add to Cart</button></div>
+</div></section>
+
+<section id="api" class="section pale"><div class="heading"><span>LIVE PLANT DATA</span><h2>Perenual Plant Explorer</h2></div><div class="api"><input id="plantInput" placeholder="Enter plant name e.g. Neem"><button onclick="searchPlant()">🔍 Search Plant</button></div><div id="result" class="grid"></div></section>
+
+<section id="about" class="section about"><div class="heading"><span>ABOUT TRIBALHERB</span><h2>Connecting Nature, People & Technology</h2><p>TribalHerb is an educational digital project for exploring medicinal plants, traditional knowledge, farmers and herbal products.</p></div></section>
+
+<footer><h2>🌿 TribalHerb</h2><p>Discover • Preserve • Connect</p><p>© 2026 TribalHerb | Educational Project</p></footer>
+
+<div id="modal" class="modal"><div class="modal-box"><button onclick="closeModal()">×</button><div id="modalContent"></div></div></div>
+<div id="cart" class="cart"><h2>🛒 Cart <button onclick="closeCart()">×</button></h2><div id="cartItems"></div><h3>Total: ₹<span id="cartTotal">0</span></h3><button onclick="checkout()">Checkout</button></div>
+<script src="script.js"></script></body></html>
